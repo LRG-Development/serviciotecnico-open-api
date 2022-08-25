@@ -18,7 +18,9 @@ public class TecnicoDTO {
 	
 	private String direccion;
 	
-	private TecnicoDTO tecnico;
+	private CiudadDTO ciudad;
+	
+	private EmpresaDTO empresa;
 	
 
 }
