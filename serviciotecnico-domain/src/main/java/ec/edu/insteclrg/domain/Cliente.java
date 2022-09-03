@@ -26,16 +26,16 @@ public class Cliente {
 	private String apellidos;
 	
 	@Column(nullable = false, unique = true)
-	private Long dni;
+	private String dni;
 	
 	@Column(nullable = false)
 	private String direccion;
 	
 	@Column(nullable = false)
-	private Long telefono;
+	private String telefono;
 	
 	@Column(nullable = false)
-	private Long celular;
+	private String celular;
 	
 	@Column(nullable = false, unique = true)
 	private String email;

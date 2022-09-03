@@ -11,13 +11,13 @@ public class ClienteDTO {
 
 	private String apellidos;
 	
-	private long dni;
+	private String dni;
 
 	private String direccion;
 
-	private Long telefono;
+	private String telefono;
 	
-	private long celular;
+	private String celular;
 
 	private String email;
 
