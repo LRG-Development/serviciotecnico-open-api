@@ -30,7 +30,7 @@ public class FacturaFormaPago {
 	private String nombre;
 	
 	@Column(nullable = false)
-	private Float valor;
+	private float valor;
 	
 	@ManyToOne
 	@JoinColumn(name = "id_empresa")

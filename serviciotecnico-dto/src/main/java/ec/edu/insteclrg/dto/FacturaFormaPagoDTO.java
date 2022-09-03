@@ -13,7 +13,7 @@ private String codigo;
 
 private String nombre;
 
-private Float valor;
+private float valor;
 
 private EmpresaDTO empresa;
 
