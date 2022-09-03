@@ -11,7 +11,7 @@ public interface GenericCrudService<DOMAIN, DTO> {
 
 	public abstract Optional<DOMAIN> find(DTO dto);
 
-	public List<DTO> findAll(DTO dto);
+	public List<DTO> findAll();
 
 	DOMAIN mapToDomain(DTO dto);
 

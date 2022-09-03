@@ -5,8 +5,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
@@ -41,11 +39,11 @@ public abstract class GenericCrudServiceImpl<DOMAIN, DTO> implements GenericCrud
 	}
 
 	@Override
-	public List<DTO> findAll(DTO dto) {
-		DOMAIN domain = mapToDomain(dto);
-		ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreNullValues().withIgnorePaths("id");
-		List<DOMAIN> objList = repository.findAll(Example.of(domain, matcher));
-		return objList.stream().map(obj -> mapToDto(obj)).collect(Collectors.toList());
+	public List<DTO> findAll() {
+		return repository.findAll().
+				stream()
+				.map(this::mapToDto)
+				.collect(Collectors.toList());
 	}
 
 	@Override
