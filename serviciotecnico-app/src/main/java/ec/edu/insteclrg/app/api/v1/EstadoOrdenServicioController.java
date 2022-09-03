@@ -33,7 +33,7 @@ public class EstadoOrdenServicioController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<EstadoOrdenServicioDTO> list = service.findAll(new EstadoOrdenServicioDTO());
+		List<EstadoOrdenServicioDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<EstadoOrdenServicioDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

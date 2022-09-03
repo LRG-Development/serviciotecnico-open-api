@@ -42,7 +42,7 @@ public class EmpresaController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<EmpresaDTO> list = service.findAll(new EmpresaDTO());
+		List<EmpresaDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<EmpresaDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

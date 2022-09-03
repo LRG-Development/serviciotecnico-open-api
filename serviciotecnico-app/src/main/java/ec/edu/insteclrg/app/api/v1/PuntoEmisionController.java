@@ -40,7 +40,7 @@ public class PuntoEmisionController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<PuntoEmisionDTO> list = service.findAll(new PuntoEmisionDTO());
+		List<PuntoEmisionDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<PuntoEmisionDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

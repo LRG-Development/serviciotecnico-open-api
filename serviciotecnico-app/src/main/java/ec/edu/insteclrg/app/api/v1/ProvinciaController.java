@@ -40,7 +40,7 @@ public class ProvinciaController {
 	
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<ProvinciaDTO> list = service.findAll(new ProvinciaDTO());
+		List<ProvinciaDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<ProvinciaDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

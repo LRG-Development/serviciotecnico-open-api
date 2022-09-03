@@ -40,7 +40,7 @@ public class TestController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<TestDTO> list = service.findAll(new TestDTO());
+		List<TestDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<TestDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

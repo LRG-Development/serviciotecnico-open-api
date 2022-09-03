@@ -40,7 +40,7 @@ public class TecnicoController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<TecnicoDTO> list = service.findAll(new TecnicoDTO());
+		List<TecnicoDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<TecnicoDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

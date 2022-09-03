@@ -39,7 +39,7 @@ public class ClienteController {
 	}
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<ClienteDTO> list = service.findAll(new ClienteDTO());
+		List<ClienteDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<ClienteDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

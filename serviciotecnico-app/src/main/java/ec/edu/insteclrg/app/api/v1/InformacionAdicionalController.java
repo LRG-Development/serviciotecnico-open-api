@@ -40,7 +40,7 @@ public class InformacionAdicionalController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<InformacionAdicionalDTO> list = service.findAll(new InformacionAdicionalDTO());
+		List<InformacionAdicionalDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<InformacionAdicionalDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

@@ -40,7 +40,7 @@ public class FormaPagoController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<FormaPagoDTO> list = service.findAll(new FormaPagoDTO());
+		List<FormaPagoDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<FormaPagoDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

@@ -40,7 +40,7 @@ public class CiudadController {
 	
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<CiudadDTO> list = service.findAll(new CiudadDTO());
+		List<CiudadDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<CiudadDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));

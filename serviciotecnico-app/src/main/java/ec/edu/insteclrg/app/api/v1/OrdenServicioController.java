@@ -42,7 +42,7 @@ public class OrdenServicioController {
 	
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<OrdenServicioDTO> list = service.findAll(new OrdenServicioDTO());
+		List<OrdenServicioDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<OrdenServicioDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));
@@ -54,7 +54,7 @@ public class OrdenServicioController {
 	@GetMapping(path = "/{numOrden}")
 	public ResponseEntity<Object> find(@PathVariable String numOrden) {
 		OrdenServicioDTO dto = new OrdenServicioDTO();
-		dto.setNumero_orden(numOrden);
+		dto.setNumOrden(numOrden);
 		Optional<OrdenServicio> test = service.find(dto);
 		if (test.isPresent()) {
 			ApiResponseDTO<OrdenServicio> response = new ApiResponseDTO<>(true, test.get());

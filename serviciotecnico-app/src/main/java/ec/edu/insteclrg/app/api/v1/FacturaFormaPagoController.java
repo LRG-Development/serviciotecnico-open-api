@@ -40,7 +40,7 @@ public class FacturaFormaPagoController {
 
 	@GetMapping
 	public ResponseEntity<Object> findAll() {
-		List<FacturaFormaPagoDTO> list = service.findAll(new FacturaFormaPagoDTO());
+		List<FacturaFormaPagoDTO> list = service.findAll();
 		if (!list.isEmpty()) {
 			ApiResponseDTO<List<FacturaFormaPagoDTO>> response = new ApiResponseDTO<>(true, list);
 			return (new ResponseEntity<Object>(response, HttpStatus.OK));
