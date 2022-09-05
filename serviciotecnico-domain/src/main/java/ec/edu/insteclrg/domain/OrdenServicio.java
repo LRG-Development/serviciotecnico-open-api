@@ -23,7 +23,7 @@ public class OrdenServicio {
 	@Column(updatable = false, nullable = false)
 	private long id;
 	
-	@Column(nullable = true, name= "numero_orden")
+	@Column(nullable = true)
 	private String numOrden;
 	
 	@ManyToOne
