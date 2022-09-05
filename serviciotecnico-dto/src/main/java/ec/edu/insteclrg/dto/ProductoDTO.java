@@ -11,17 +11,17 @@ public class ProductoDTO {
 
 	private String nombre;
 
-	private long precioVenta;
+	private float precioVenta;
 
-	private long stockMin;
+	private float stockMin;
 
-	private long stockMax;
+	private float stockMax;
 
-	private long stock;
+	private float stock;
 
-	private long controlaStock;
+	private boolean controlaStock;
 
-	private long aplicaIva;
+	private boolean aplicaIva;
 	
 	private EmpresaDTO empresa;
 

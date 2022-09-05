@@ -28,22 +28,22 @@ public class Producto {
 	private String nombre;
 
 	@Column(nullable = false)
-	private long precioventa;
+	private float precioventa;
 
 	@Column(nullable = false)
-	private long stockMin;
+	private float stockMin;
 	
 	@Column(nullable = false)
-	private long stockMax;
+	private float stockMax;
 
 	@Column(nullable = false)
-	private long stock;
+	private float stock;
 	
 	@Column(nullable = false)
-	private long controlaStock;
+	private boolean controlaStock;
 
 	@Column(nullable = false)
-	private long aplicaIva ;
+	private boolean aplicaIva ;
 	
 	@ManyToOne
 	@JoinColumn(name = "empres_id")
